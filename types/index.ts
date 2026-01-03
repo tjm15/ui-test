@@ -8,6 +8,8 @@ export type ShellKey =
   | "decisions"
   | "monitoring";
 
+export type CardIntensity = 0 | 1 | 2 | 3;
+
 export type StageKey =
   | "scoping"
   | "g1"
@@ -120,4 +122,13 @@ export type Plan = {
   authority: string;
   name: string;
   status: string;
+};
+
+export type HomeCardIntensities = {
+  programme: CardIntensity;
+  planContent: CardIntensity;
+  scrutiny: CardIntensity;
+  evidence: CardIntensity;
+  places: CardIntensity;
+  scenarios: CardIntensity;
 };

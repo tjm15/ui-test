@@ -33,6 +33,16 @@ export default function Home() {
 
   const homeView: HomeSystemVM = React.useMemo(
     () => ({
+      // Intensity levels for diffusion mode
+      intensities: {
+        programme: 2, // Pressing: G2 in progress, dates approaching
+        planContent: 2, // Pressing: high churn area
+        scrutiny: 3, // Acute: multiple fragile points
+        evidence: 2, // Pressing: 3 items missing, 2 critical
+        places: 1, // Active: normal progress, minor risks
+        scenarios: 1, // Active: stable breadth, manageable stale count
+      },
+
       // Programme
       stage: {
         label: "Regulation 19",

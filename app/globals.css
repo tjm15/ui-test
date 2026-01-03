@@ -35,3 +35,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Slow pulse animation for diffusion mode acute intensity */
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.85;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Subtle glow effect for gate icons at acute intensity */
+  .drop-shadow-glow {
+    filter: drop-shadow(0 0 2px currentColor);
+  }
+}
